@@ -143,22 +143,6 @@ dict = {
     3 : 'U'
 }
 
-flaq = True
-test = []
-for i in range(n):
-    help = []
-    for j in range(n):
-        help+=[board[i][j]]
-    test += [help]
-test1 = R_fun(board)
-board = test
-test2 = L_fun(board)
-board = test
-test3 = U_fun(board)
-board = test
-test4 = D_fun(board)
-if test1==test and test2==test and test3==test and test4==test:
-    flaq = False
 way = ""
 movement = []
 for i in range(len(numberOfMove)):
@@ -169,7 +153,7 @@ for i in range(len(numberOfMove)):
 
 for t in range(numberOfMove):
     m = 0
-    while flaq:
+    while m<=numberOfMove:
         move = dict[m%4]
         if move =='R':
             R_fun(board)
@@ -195,3 +179,20 @@ for i in board:
         print(j , end = '\t')
     print()
 
+
+flaq = True
+test = []
+for i in range(n):
+    help = []
+    for j in range(n):
+        help+=[board[i][j]]
+    test += [help]
+test1 = R_fun(board)
+board = test
+test2 = L_fun(board)
+board = test
+test3 = U_fun(board)
+board = test
+test4 = D_fun(board)
+if test1==test and test2==test and test3==test and test4==test:
+    flaq = False
