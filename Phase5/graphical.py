@@ -210,7 +210,7 @@ while True:
                     randomPlace_D(threes)
                 
     #board sizes.      
-    pygame.draw.rect(win , (50,50,50), (50,50 ,600,600))
+    pygame.draw.rect(win , (50,50,50), (50,50 ,600,600), border_radius=20)
     pygame.draw.line(win , (255,255,255), (200,50), (200,650))
     pygame.draw.line(win , (255,255,255), (350,50), (350,650))
     pygame.draw.line(win , (255,255,255), (500,50), (500,650))
